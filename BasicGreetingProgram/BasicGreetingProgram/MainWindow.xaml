@@ -6,10 +6,16 @@
         xmlns:local="clr-namespace:BasicGreetingProgram"
         mc:Ignorable="d"
         Title="Please login" Height="450" Width="580" ResizeMode="NoResize">
-    <Grid>
-        <Button Content="Login" Click="LoginClick" HorizontalAlignment="Left" Margin="222,210,0,0" VerticalAlignment="Top" Width="131" Height="40"/>
-        <TextBox x:Name="TextBox_loginName" MaxLength="30" HorizontalAlignment="Left" Height="18" Margin="161,164,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="253" TextChanged="TextBox_TextChanged"/>
-        <Label Content="Enter your name" HorizontalAlignment="Left" Margin="156,128,0,0" VerticalAlignment="Top" Height="31" Width="108"/>
+    <Grid x:Name="RootGrid">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="287*"/>
+            <ColumnDefinition Width="286*"/>
+        </Grid.ColumnDefinitions>
+        <Button x:Name="Button_Login" Content="Login" Click="LoginClick" HorizontalAlignment="Left" Margin="222,220,0,0" VerticalAlignment="Top" Width="131" Height="40" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="TextBox_loginName" MaxLength="30" HorizontalAlignment="Left" Height="18" Margin="161,164,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="253" Grid.ColumnSpan="2"/>
+        <Label x:Name="Label_EnterName" Content="Enter your name" HorizontalAlignment="Left" Margin="156,128,0,0" VerticalAlignment="Top" Height="31" Width="108"/>
+        <Label x:Name="Label_Greeting" Visibility="Collapsed" Content="Welcome back user " HorizontalContentAlignment="Center" HorizontalAlignment="Left" Margin="111,97,0,0" VerticalAlignment="Top" Height="31" Width="358" Grid.ColumnSpan="2"/>
+        <Label x:Name="Label_NoName" Visibility ="Collapsed" Content="No name was entered, please enter your name" HorizontalAlignment="Left" Margin="161,187,0,0" VerticalAlignment="Top" Height="28" Width="253" FontSize="11" Foreground="#FFFF0009" Grid.ColumnSpan="2"/>
 
     </Grid>
 </Window>

@@ -29,10 +29,17 @@ namespace BasicGreetingProgram
             if (TextBox_loginName.Text !="")
             {
                 //Greet the user
+                foreach(Control control in this.RootGrid.Children)
+                {
+                    control.Visibility = Visibility.Collapsed;
+                }
+                Label_Greeting.Content += TextBox_loginName.Text;
+                Label_Greeting.Visibility = Visibility.Visible;
             }
             else
             {
                 //Tell the user to enter the name
+                Label_NoName.Visibility = Visibility.Visible;
             }
         }
     }
