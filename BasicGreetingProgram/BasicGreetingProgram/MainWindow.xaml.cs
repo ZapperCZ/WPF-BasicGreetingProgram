@@ -24,5 +24,16 @@ namespace BasicGreetingProgram
         {
             InitializeComponent();
         }
+        public void LoginClick(object sender, RoutedEventArgs e)
+        {
+            if (TextBox_loginName.Text !="")
+            {
+                //Greet the user
+            }
+            else
+            {
+                //Tell the user to enter the name
+            }
+        }
     }
 }

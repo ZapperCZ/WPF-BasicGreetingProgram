@@ -5,8 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BasicGreetingProgram"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Please login" Height="450" Width="580" ResizeMode="NoResize">
     <Grid>
-        
+        <Button Content="Login" Click="LoginClick" HorizontalAlignment="Left" Margin="222,210,0,0" VerticalAlignment="Top" Width="131" Height="40"/>
+        <TextBox x:Name="TextBox_loginName" MaxLength="30" HorizontalAlignment="Left" Height="18" Margin="161,164,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="253" TextChanged="TextBox_TextChanged"/>
+        <Label Content="Enter your name" HorizontalAlignment="Left" Margin="156,128,0,0" VerticalAlignment="Top" Height="31" Width="108"/>
+
     </Grid>
 </Window>
